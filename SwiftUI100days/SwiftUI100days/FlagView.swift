@@ -10,10 +10,7 @@ import SwiftUI
 
 struct FlagView: View {
     var body: some View {
-        ZStack {
-            Color.red.edgesIgnoringSafeArea(.all)
-            Text("Your content")
-        }
+        LinearGradient(gradient: Gradient(colors: [.white, .black]), startPoint: .top, endPoint: .bottom)
     }
 }
 
