@@ -10,7 +10,14 @@ import SwiftUI
 
 struct FlagView: View {
     var body: some View {
-        LinearGradient(gradient: Gradient(colors: [.white, .black]), startPoint: .top, endPoint: .bottom)
+        Button(action: {
+            print("Edit button was tapped")
+        }) {
+            HStack(spacing: 10) {
+                Image(systemName: "pencil")
+                Text("Edit")
+            }
+        }
     }
 }
 
