@@ -32,15 +32,15 @@ struct ContentView: View {
 //        WeSplit()
 
         TabView {
-            WeSplit()
-                .tabItem {
-                    Image(systemName: "1.square.fill")
-                    Text("split")
-                }
             FlagView()
                 .tabItem {
-                    Image(systemName: "2.square.fill")
+                    Image(systemName: "1.square.fill")
                     Text("Flag")
+                }
+            WeSplit()
+                .tabItem {
+                    Image(systemName: "2.square.fill")
+                    Text("Split")
                 }
         }
         .font(.headline)

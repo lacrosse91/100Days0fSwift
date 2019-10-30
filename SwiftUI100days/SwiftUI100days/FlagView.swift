@@ -10,7 +10,10 @@ import SwiftUI
 
 struct FlagView: View {
     var body: some View {
-        Text("Flag")
+        ZStack {
+            Color.red.edgesIgnoringSafeArea(.all)
+            Text("Your content")
+        }
     }
 }
 
