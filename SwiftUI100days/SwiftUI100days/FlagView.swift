@@ -10,11 +10,15 @@ import SwiftUI
 
 struct FlagView: View {
 
-    var teachers = ["緒方", "大保", "五嶋"]
+    @State private var showingScore = false
+
+    @State private var scoreTitle = ""
+
+    @State private var teachers = ["緒方", "大保", "五嶋"]
 
     var subjects = ["生化学", "組織学", "薬理学"]
 
-    var correctAnswer = Int.random(in: 0...2)
+    @State private var correctAnswer = Int.random(in: 0...2)
 
     var body: some View {
         ZStack {
@@ -29,6 +33,7 @@ struct FlagView: View {
                 ForEach(0 ..< 3) { number in
                     Button(action: {
                        // flag was tapped
+                        self.flagTapped(number)
                     }) {
                         Text(self.subjects[number])
                             .foregroundColor(.white)
@@ -36,8 +41,29 @@ struct FlagView: View {
                 }
             }
         }
+        .alert(isPresented: $showingScore) {
+            Alert(title: Text(scoreTitle), message: Text("Your score is ???"), dismissButton: .default(Text("Continue")) {
+                self.askQuestion()
+            })
+        }
 
 
+    }
+
+    func flagTapped(_ number: Int) {
+
+        if number == correctAnswer {
+            scoreTitle = "Correct"
+        } else {
+            scoreTitle = "Wrong"
+        }
+
+        showingScore = true
+    }
+
+    func askQuestion() {
+//        teachers.shuffle()
+        correctAnswer = Int.random(in: 0...2)
     }
 }
 
