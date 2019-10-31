@@ -9,15 +9,35 @@
 import SwiftUI
 
 struct FlagView: View {
-    @State private var showingAlert = false
+
+    var teachers = ["緒方", "大保", "五嶋"]
+
+    var subjects = ["生化学", "組織学", "薬理学"]
+
+    var correctAnswer = Int.random(in: 0...2)
 
     var body: some View {
-        Button("Show Alert") {
-            self.showingAlert = true
+        ZStack {
+            Color.blue.edgesIgnoringSafeArea(.all)
+
+            VStack(spacing: 30) {
+                VStack {
+                    Text("Tap the subjects of")
+                    Text(teachers[correctAnswer])
+                }
+
+                ForEach(0 ..< 3) { number in
+                    Button(action: {
+                       // flag was tapped
+                    }) {
+                        Text(self.subjects[number])
+                            .foregroundColor(.white)
+                    }
+                }
+            }
         }
-        .alert(isPresented: $showingAlert) {
-            Alert(title: Text("Hello SwiftUI!"), message: Text("This is some detail message"), dismissButton: .default(Text("OK")))
-        }
+
+
     }
 }
 
