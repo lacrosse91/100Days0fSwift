@@ -17,6 +17,7 @@
 		D39925E92365C4DC00797B93 /* SwiftUI100daysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39925E82365C4DC00797B93 /* SwiftUI100daysUITests.swift */; };
 		D39925F72366F23900797B93 /* WeWplit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39925F62366F23900797B93 /* WeWplit.swift */; };
 		D39925F92366F40300797B93 /* FlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39925F82366F40300797B93 /* FlagView.swift */; };
+		D39925FB236BB18A00797B93 /* ViewAndModifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39925FA236BB18A00797B93 /* ViewAndModifer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D39925EA2365C4DC00797B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D39925F62366F23900797B93 /* WeWplit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeWplit.swift; sourceTree = "<group>"; };
 		D39925F82366F40300797B93 /* FlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagView.swift; sourceTree = "<group>"; };
+		D39925FA236BB18A00797B93 /* ViewAndModifer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAndModifer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				D39925C82365C4DA00797B93 /* SceneDelegate.swift */,
 				D39925CA2365C4DA00797B93 /* ContentView.swift */,
 				D39925F82366F40300797B93 /* FlagView.swift */,
+				D39925FA236BB18A00797B93 /* ViewAndModifer.swift */,
 				D39925F62366F23900797B93 /* WeWplit.swift */,
 				D39925CC2365C4DC00797B93 /* Assets.xcassets */,
 				D39925D12365C4DC00797B93 /* LaunchScreen.storyboard */,
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D39925F72366F23900797B93 /* WeWplit.swift in Sources */,
+				D39925FB236BB18A00797B93 /* ViewAndModifer.swift in Sources */,
 				D39925F92366F40300797B93 /* FlagView.swift in Sources */,
 				D39925C72365C4DA00797B93 /* AppDelegate.swift in Sources */,
 				D39925C92365C4DA00797B93 /* SceneDelegate.swift in Sources */,

@@ -42,6 +42,11 @@ struct ContentView: View {
                     Image(systemName: "2.square.fill")
                     Text("Split")
                 }
+            ViewAndModifer()
+                .tabItem() {
+                    Image(systemName: "3.square.fill")
+                    Text("View")
+            }
         }
         .font(.headline)
 

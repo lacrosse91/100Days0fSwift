@@ -14,6 +14,8 @@ struct FlagView: View {
 
     @State private var scoreTitle = ""
 
+    @State private var currentScore = 0
+
     @State private var teachers = ["緒方", "大保", "五嶋"]
 
     var subjects = ["生化学", "組織学", "薬理学"]
@@ -42,7 +44,7 @@ struct FlagView: View {
             }
         }
         .alert(isPresented: $showingScore) {
-            Alert(title: Text(scoreTitle), message: Text("Your score is ???"), dismissButton: .default(Text("Continue")) {
+            Alert(title: Text(scoreTitle), message: Text("Your score is \(currentScore)"), dismissButton: .default(Text("Continue")) {
                 self.askQuestion()
             })
         }
@@ -53,6 +55,7 @@ struct FlagView: View {
     func flagTapped(_ number: Int) {
 
         if number == correctAnswer {
+            currentScore += 1
             scoreTitle = "Correct"
         } else {
             scoreTitle = "Wrong"
